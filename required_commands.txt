@@ -1,0 +1,18 @@
+docker exercise commands:
+
+1.  docker image build . -t library-image
+2.  az group create --name kpecevlibraryrg --location westeurope
+3.  az acr create --resource-group kpecevlibraryrg --name kpecevlibrarycr --sku basic
+4.  docker image build . -t kpecevlibrarycr.azurecr.io/library-image
+5.  docker login azure
+6.  az acr login --name kpecevlibrarycr
+7.  docker push kpecevlibrarycr.azurecr.io/library-image
+8.  docker context create aci librarycontext
+9.  docker context use librarycontext
+10. docker-compose up -d
+
+
+terraform exercise commands:
+
+1. terraform init
+2. terraform apply -var-file="values.tfvars"
